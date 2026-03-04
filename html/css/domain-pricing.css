@@ -1,0 +1,45 @@
+/* from domain-pricing.html */
+body{font-family:'Nunito',sans-serif}
+    h1,h2,h3,h4,.font-heading{font-family:'Rajdhani',sans-serif}
+    .hero-bg{background:linear-gradient(135deg,#0a2540 0%,#023e8a 40%,#0077b6 75%,#00b4d8 100%);position:relative;overflow:hidden}
+    .hero-bg::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2300b4d8' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+    .glass{background:rgba(255,255,255,0.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.15)}
+    .nav-link{position:relative}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:#00b4d8;transition:width 0.3s ease}
+    .nav-link:hover::after{width:100%}
+    .check{color:#00b4d8}
+    .dark body{background:#020b1c;color:#e2e8f0}
+    .dark header{background:rgba(2,11,28,0.95)!important}
+    .dark .bg-white{background-color:#0d1b2e!important}
+    .dark .bg-surface{background-color:#0a1628!important}
+    .dark .text-gray-600{color:#94a3b8!important}
+    .dark .text-gray-800{color:#e2e8f0!important}
+    .dark .border-gray-100,.dark .border-gray-200{border-color:#1e3a5f!important}
+    .dark #mob{background:#0d1b2e;border-color:#1e3a5f}
+    .dark .tld-row:hover{background:#0a1e38!important}
+    .dark .tbl-head{background:#091525!important;color:#90e0ef!important}
+    .dark .cat-btn{background:#0d1b2e!important;color:#94a3b8!important;border-color:#1e3a5f!important}
+    .dark .cat-btn.active{background:#00b4d8!important;color:#0a2540!important;border-color:#00b4d8!important}
+    .dark .search-box{background:#0d1b2e!important;border-color:#1e3a5f!important;color:#e2e8f0!important}
+    .dark .domain-search-bar{background:#0d1b2e!important;border-color:#1e3a5f!important}
+    /* Table */
+    .tbl-head{background:#f0f9ff;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:#0077b6}
+    .tld-row{transition:background 0.15s}
+    .tld-row:hover{background:#f0f9ff}
+    .badge-popular{background:#00b4d8;color:#0a2540;font-size:0.6rem;padding:1px 6px;border-radius:999px;font-weight:700;font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:0.05em;vertical-align:middle;margin-left:4px}
+    .badge-sale{background:#f59e0b;color:#fff;font-size:0.6rem;padding:1px 6px;border-radius:999px;font-weight:700;font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:0.05em;vertical-align:middle;margin-left:4px}
+    .badge-new{background:#10b981;color:#fff;font-size:0.6rem;padding:1px 6px;border-radius:999px;font-weight:700;font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:0.05em;vertical-align:middle;margin-left:4px}
+    .cat-btn{transition:all 0.2s;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase;padding:8px 18px;border-radius:999px;border:2px solid #e2e8f0;cursor:pointer;background:#fff;color:#64748b}
+    .cat-btn:hover{border-color:#00b4d8;color:#00b4d8}
+    .cat-btn.active{background:#0a2540;color:#fff;border-color:#0a2540}
+    .tld-hidden{display:none}
+    .search-box{width:100%;padding:12px 16px 12px 44px;border:2px solid #e2e8f0;border-radius:12px;font-family:'Nunito',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+    .search-box:focus{border-color:#00b4d8}
+    /* Domain search bar */
+    .domain-search-bar{background:#fff;border:2px solid #e2e8f0;border-radius:16px;display:flex;align-items:center;overflow:hidden}
+    .domain-search-bar input{flex:1;border:none;outline:none;padding:14px 18px;font-size:1rem;font-family:'Nunito',sans-serif;background:transparent}
+    .domain-search-bar button{background:#0a2540;color:#fff;padding:14px 28px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.05em;border:none;cursor:pointer;transition:background 0.2s;white-space:nowrap}
+    .domain-search-bar button:hover{background:#00b4d8;color:#0a2540}
+    /* Whois type selector inside bar */
+    .tld-select{border:none;outline:none;padding:14px 10px;font-family:'Nunito',sans-serif;font-size:0.9rem;background:transparent;color:#64748b;cursor:pointer;border-left:2px solid #e2e8f0}
+

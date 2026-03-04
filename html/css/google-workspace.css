@@ -1,0 +1,43 @@
+/* from google-workspace.html */
+body{font-family:'Nunito',sans-serif}
+    h1,h2,h3,h4,.font-heading{font-family:'Rajdhani',sans-serif}
+    .hero-bg{background:linear-gradient(135deg,#0a2540 0%,#023e8a 40%,#0077b6 75%,#00b4d8 100%);position:relative;overflow:hidden}
+    .hero-bg::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2300b4d8' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+    .glass{background:rgba(255,255,255,0.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.15)}
+    .nav-link{position:relative}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:#00b4d8;transition:width 0.3s ease}
+    .nav-link:hover::after{width:100%}
+    .plan-card{transition:all 0.3s cubic-bezier(.4,0,.2,1);border:2px solid transparent}
+    .plan-card:hover{transform:translateY(-8px);border-color:#4285F4;box-shadow:0 24px 48px rgba(66,133,244,0.18)}
+    .plan-card.popular{border-color:#4285F4}
+    .g-popular-bg{background:linear-gradient(160deg,#1a3a6e 0%,#0a2540 100%)}
+    .g-check{color:#34A853}
+    .app-card{transition:all 0.3s;border:1px solid transparent}
+    .app-card:hover{border-color:#4285F4;transform:translateY(-4px);box-shadow:0 12px 32px rgba(66,133,244,0.12)}
+    .billing-tab{cursor:pointer;transition:all .2s;padding:8px 20px;border-radius:8px}
+    .billing-tab.active{background:#0a2540;color:#fff}
+    .dark body{background:#020b1c;color:#e2e8f0}
+    .dark header{background:rgba(2,11,28,0.95)!important}
+    .dark .bg-white{background-color:#0d1b2e!important}
+    .dark .bg-surface{background-color:#0a1628!important}
+    .dark .text-gray-600{color:#94a3b8!important}
+    .dark .border-gray-100,.dark .border-gray-200{border-color:#1e3a5f!important}
+    .dark .plan-card{background:#0d1b2e}
+    .dark #mob{background:#0d1b2e;border-color:#1e3a5f}
+    .dark .faq-item-wrap{background:#0d1b2e}
+    .dark .app-card{background:#0d1b2e}
+/* Google Workspace color utilities */
+.gw-blue{color:#4285F4}.gw-blue-bg{background:#4285F4}
+.gw-green{color:#34A853}.gw-green-bg{background:#34A853}
+.gw-yellow{color:#FBBC05}.gw-yellow-bg{background:#FBBC05}
+.gw-red{color:#EA4335}.gw-red-bg{background:#EA4335}
+.gw-ms-blue-bg{background:#00A4EF}
+.gw-blue-bg-light{background:rgba(66,133,244,0.1)}
+.gw-green-bg-light{background:rgba(52,168,83,0.1)}
+.gw-yellow-bg-light{background:rgba(251,188,5,0.1)}
+.gw-red-bg-light{background:rgba(234,67,53,0.1)}
+.gw-billing-note{color:#4285F4}
+.gw-billing-note-light{color:#90d4ff}
+.gw-btn{background:#4285F4}.gw-btn:hover{background:#1a73e8}
+.gw-contact-btn{border-color:#EA4335;color:#EA4335}.gw-contact-btn:hover{background:#EA4335;color:#fff}
+.gw-contact-text{color:#EA4335}

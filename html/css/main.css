@@ -1,0 +1,517 @@
+/* ============================================
+   Hostika — Shared Styles
+   10Corp Web Services LLC
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --color-primary: #0a2540;
+  --color-accent: #00b4d8;
+  --color-accent-light: #90e0ef;
+  --color-accent-dark: #0077b6;
+  --color-surface: #f0f9ff;
+  --color-muted: #64748b;
+}
+
+/* --- Off-Canvas Mobile Menu --- */
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 85vw;
+  height: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-panel.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 199;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.mobile-menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-panel .menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-panel .menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.mobile-menu-panel .menu-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.mobile-menu-panel .menu-links a:hover,
+.mobile-menu-panel .menu-links a.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-accent);
+}
+
+.mobile-menu-panel .menu-links a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.mobile-menu-panel .menu-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.mobile-menu-panel .menu-footer a {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+/* Page push effect when menu is open */
+body.mobile-menu-active {
+  overflow: hidden;
+}
+
+/* --- Typography --- */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, .font-heading {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* --- Nav Link Underline Animation --- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --- Glass Morphism --- */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* --- Hero Section Base (Cyan Default) --- */
+.hero-bg {
+  background: linear-gradient(135deg, #0a2540 0%, #023e8a 40%, #0077b6 75%, #00b4d8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2300b4d8' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* --- Check Mark Color --- */
+.check {
+  color: var(--color-accent);
+}
+
+/* --- Plan Cards Base --- */
+.plan-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-accent);
+  box-shadow: 0 24px 48px rgba(0, 180, 216, 0.15);
+}
+
+.plan-card.popular {
+  border-color: var(--color-accent);
+}
+
+/* --- Feature / Spec Row --- */
+.feature-row {
+  border-bottom: 1px solid #f1f5f9;
+  padding: 0.75rem 0;
+}
+
+.feature-row:last-child {
+  border-bottom: none;
+}
+
+/* --- FAQ --- */
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* --- Button Outline Primary --- */
+.btn-outline-primary {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* --- Stat Card --- */
+.stat-card {
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Animation Float --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* --- Dark Mode Core --- */
+.dark body {
+  background: #020b1c;
+  color: #e2e8f0;
+}
+
+.dark header,
+.dark .topbar-wrap {
+  background: rgba(2, 11, 28, 0.96) !important;
+}
+
+.dark .bg-white {
+  background-color: #0d1b2e !important;
+}
+
+.dark .bg-surface {
+  background-color: #0a1628 !important;
+}
+
+.dark .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-primary {
+  color: #e2e8f0 !important;
+}
+
+.dark .border-gray-100,
+.dark .border-gray-200 {
+  border-color: #1e3a5f !important;
+}
+
+.dark .plan-card {
+  background: #0d1b2e;
+}
+
+.dark .feature-row {
+  border-color: #1e3a5f;
+}
+
+.dark .faq-item {
+  border-color: #1e3a5f;
+}
+
+.dark #mob {
+  background: #0d1b2e;
+  border-color: #1e3a5f;
+}
+
+.dark #mobile-menu {
+  background: #0d1b2e;
+  border-color: #1e3a5f;
+}
+
+.dark .mobile-menu-panel {
+  background: #0a1628;
+}
+
+.dark .mobile-menu-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* --- Accessibility: Screen Reader Only --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Accessibility: Skip Link --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* --- Accessibility: Focus Indicators --- */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* --- Accessibility: Keyboard-Accessible Dropdown --- */
+.group:focus-within > div[role="menu"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* --- Feature Card --- */
+.feature-card {
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-bottom-color: var(--color-accent);
+}
+
+/* --- Icon Circle (Gradient) --- */
+.icon-circle {
+  background: linear-gradient(135deg, var(--color-accent-dark), var(--color-accent));
+}
+
+/* --- Pricing Card --- */
+.pricing-card {
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 40px rgba(0, 180, 216, 0.15);
+}
+
+/* --- Pricing Featured (Gradient BG) --- */
+.pricing-featured {
+  background: linear-gradient(135deg, #0a2540 0%, #023e8a 50%, #0077b6 100%);
+}
+
+/* --- Testimonial Card --- */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 180, 216, 0.12);
+}
+
+/* --- Brand Ticker --- */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker 20s linear infinite;
+}
+
+/* --- Scroll Reveal Animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Badge (Gradient Text) --- */
+.badge {
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- CTA Background (Gradient + Pattern) --- */
+.cta-bg {
+  background: linear-gradient(135deg, #0a2540 0%, #023e8a 40%, #0077b6 75%, #00b4d8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300b4d8' fill-opacity='0.08'%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* --- Wave Divider --- */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  width: calc(100% + 2px);
+  height: 60px;
+  display: block;
+}
+
+/* --- Scroll-to-Top Button --- */
+#scroll-top {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#scroll-top:hover {
+  transform: translateY(-3px);
+}
+
+/* --- Dark Mode Enhancements for New Classes --- */
+.dark .feature-card {
+  background: #0d1b2e;
+  border-color: #1e3a5f;
+}
+
+.dark .feature-card:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.dark .pricing-card {
+  background: #0d1b2e;
+}
+
+.dark .testimonial-card {
+  background: #0d1b2e;
+  border-color: #1e3a5f;
+}
+
+.dark footer {
+  background: #020b1c;
+}
+
+/* --- Accessibility: Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .plan-card:hover {
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .ticker-track {
+    animation: none;
+  }
+}

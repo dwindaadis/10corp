@@ -1,0 +1,148 @@
+/* ============================================
+   Hostika — Legal Page Styles
+   10Corp Web Services LLC
+   ============================================ */
+
+/* --- Legal Document Body --- */
+.legal-body h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.legal-body h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0a2540;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.legal-body p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: #374151;
+  font-size: 0.9375rem;
+}
+
+.legal-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-body ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-body li {
+  margin-bottom: 0.4rem;
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.legal-body strong {
+  color: #0a2540;
+}
+
+.legal-body a {
+  color: #00b4d8;
+  text-decoration: underline;
+}
+
+.legal-body a:hover {
+  color: #0077b6;
+}
+
+.legal-body hr {
+  border-color: #e2e8f0;
+  margin: 2rem 0;
+}
+
+/* --- Legal Tables --- */
+.legal-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.legal-body th {
+  background: #0a2540;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+}
+
+.legal-body td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.legal-body tr:nth-child(even) td {
+  background: #f0f9ff;
+}
+
+/* --- Dark Mode: Legal --- */
+.dark .legal-body p,
+.dark .legal-body li,
+.dark .legal-body td {
+  color: #cbd5e1;
+}
+
+.dark .legal-body h2,
+.dark .legal-body h3,
+.dark .legal-body strong {
+  color: #e2e8f0;
+}
+
+.dark .legal-body h2 {
+  border-color: #1e3a5f;
+}
+
+.dark .legal-body a {
+  color: #00b4d8;
+}
+
+.dark #sidebar-panel {
+  background: #0d1b2e;
+  border-color: #1e3a5f;
+}
+
+.dark aside .bg-white {
+  background-color: #0d1b2e !important;
+}
+
+.dark table td {
+  border-color: #1e3a5f;
+}
+
+.dark table tr:nth-child(even) td {
+  background: #0a1628;
+}
+
+/* --- Print Styles --- */
+@media print {
+  aside,
+  .topbar-wrap,
+  header,
+  #print-hide {
+    display: none !important;
+  }
+
+  .legal-body {
+    font-size: 11pt;
+  }
+}

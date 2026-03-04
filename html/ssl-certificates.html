@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSL Certificates | Hostika – 10Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { heading: ['Rajdhani','sans-serif'], body: ['Nunito','sans-serif'] },
+          colors: { primary:'#0a2540', accent:'#00b4d8', accentLight:'#90e0ef', accentDark:'#0077b6', surface:'#f0f9ff', muted:'#64748b' },
+          animation: { 'float':'float 4s ease-in-out infinite' },
+          keyframes: { float:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-12px)'}} }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hostika-darkmode.css">
+  <link rel="stylesheet" href="css/ssl-certificates.css">
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+<!-- TOP BAR -->
+<div class="bg-primary text-white text-sm py-2 hidden md:block">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <div class="flex gap-6 items-center">
+      <a href="mailto:support@hostika.com" class="flex items-center gap-1.5 hover:text-accent transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>support@hostika.com</a>
+      <a href="tel:+17622333344" class="flex items-center gap-1.5 hover:text-accent transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>+1 (762) 233-3344</a>
+      <span class="flex items-center gap-1.5 text-accent"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>9:00 AM – 5:00 PM</span>
+    </div>
+    <div class="flex gap-4">
+      <a href="#" class="hover:text-accent transition-colors">🔔 Live Chat</a>
+      <a href="#" class="bg-accent text-primary px-3 py-0.5 rounded font-semibold hover:bg-accentLight transition-colors text-xs">Get Started Free</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg"><span class="text-accent font-heading font-bold text-xl">H</span></div>
+      <div><span class="font-heading text-2xl font-bold text-primary">Hostika</span><span class="block text-xs text-muted -mt-1">by 10Corp</span></div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="domain-pricing.html" class="nav-link font-heading font-semibold text-primary hover:text-accent transition-colors tracking-wide">DOMAIN</a>
+      <div class="relative group">
+        <a href="#" class="nav-link font-heading font-semibold text-primary hover:text-accent tracking-wide flex items-center gap-1">HOSTING<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+        <div class="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 z-50">
+          <div class="py-2">
+            <a href="shared-hosting.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>Shared Hosting</a>
+            <a href="wordpress-hosting.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>WordPress Hosting</a>
+            <a href="vps-hosting.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>VPS Hosting</a>
+            <a href="dedicated-server.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>Dedicated Server</a>
+            <a href="email-hosting.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>Email Hosting</a>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="#" class="nav-link font-heading font-semibold text-accent tracking-wide flex items-center gap-1">SECURITY<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+        <div class="absolute top-full left-0 mt-2 w-52 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0 z-50">
+          <div class="py-2">
+            <a href="ssl-certificates.html" class="flex items-center gap-2 px-4 py-2.5 bg-surface text-accent text-sm font-semibold"><span class="w-2 h-2 bg-accent rounded-full"></span>SSL Certificates</a>
+            <a href="website-backup.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>Website Backup</a>
+            <a href="website-security.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-surface hover:text-accent transition-colors text-sm"><span class="w-2 h-2 bg-accent rounded-full"></span>Website Security</a>
+          </div>
+        </div>
+      </div>
+      <a href="web-design.html" class="nav-link font-heading font-semibold text-primary hover:text-accent transition-colors tracking-wide">WEB DESIGN</a>
+      <a href="portfolio.html" class="nav-link font-heading font-semibold text-primary hover:text-accent tracking-wide">PORTFOLIO</a>
+      <a href="about.html" class="nav-link font-heading font-semibold text-primary hover:text-accent transition-colors tracking-wide">ABOUT US</a>
+      <a href="universal-terms-of-service.html" class="nav-link font-heading font-semibold text-primary hover:text-accent tracking-wide">LEGAL</a>
+      <a href="contact.html" class="nav-link font-heading font-semibold text-primary hover:text-accent transition-colors tracking-wide">CONTACT</a>
+    </nav>
+    <div class="hidden lg:flex items-center gap-3">
+      <button id="darkToggle" class="text-sm px-3 py-1.5 rounded-lg border border-gray-200 hover:border-accent transition-colors text-muted">🌙 Dark</button>
+      <a href="#" class="font-semibold text-primary hover:text-accent transition-colors text-sm">Sign In</a>
+      <a href="#" class="bg-primary text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-accentDark transition-colors text-sm shadow-lg">Get Started</a>
+    </div>
+    <button class="lg:hidden p-2 rounded-lg hover:bg-surface" id="menuToggle" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="Toggle mobile menu">
+      <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div></header>
+<!-- Off-Canvas Mobile Menu -->
+<div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
+<nav id="mobile-menu-panel" class="mobile-menu-panel" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+  <div class="menu-header">
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center"><span class="text-primary font-heading font-bold text-lg">H</span></div>
+      <span class="font-heading text-xl font-bold">Hostika</span>
+    </a>
+    <button id="menuClose" class="p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="menu-links">
+    <a href="domain-pricing.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>DOMAIN</a>
+    <a href="shared-hosting.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>HOSTING</a>
+    <a href="web-design.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>WEB DESIGN</a>
+    <a href="portfolio.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>PORTFOLIO</a>
+    <a href="about.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>ABOUT US</a>
+    <a href="universal-terms-of-service.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>LEGAL</a>
+    <a href="contact.html"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>CONTACT</a>
+  </div>
+  <div class="menu-footer">
+    <a href="#" class="bg-accent text-primary mb-2 hover:brightness-110">Get Started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg py-24 relative">
+  <div class="absolute top-10 right-20 w-64 h-64 rounded-full bg-accent/10 blur-3xl animate-float"></div>
+  <div class="absolute bottom-10 left-10 w-48 h-48 rounded-full bg-accentDark/15 blur-2xl" style="animation:float 6s ease-in-out infinite reverse"></div>
+  <div class="max-w-7xl mx-auto px-6 text-center text-white relative z-10">
+    <span class="inline-block bg-accent/20 text-accentLight text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Sectigo Powered · Trusted Globally</span>
+    <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6">SSL <span class="text-accent">Certificates</span></h1>
+    <p class="text-blue-200 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">Secure your website, protect your visitors, and boost your Google ranking with industry-trusted Sectigo SSL certificates. From basic DV to full EV — we have you covered.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#plans" class="bg-accent text-primary font-bold px-8 py-4 rounded-xl hover:bg-accentLight transition-all shadow-xl hover:shadow-accent/40 hover:-translate-y-1 text-lg">See Plans & Pricing</a>
+      <a href="contact.html" class="glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all text-lg">Talk to an Expert</a>
+    </div>
+    <div class="mt-8 flex items-center justify-center gap-2 text-blue-300 text-sm">
+      <a href="index.html" class="hover:text-accent">Home</a><span>›</span>
+      <span>Security</span><span>›</span>
+      <span class="text-accent">SSL Certificates</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class="py-10 bg-white border-b border-gray-100 reveal">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="flex flex-col items-center text-center gap-2">
+        <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center"><svg class="w-7 h-7 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-primary">256-bit Encryption</span>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2">
+        <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center"><svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+        <span class="font-heading text-sm font-bold text-primary">99.9% Browser Trust</span>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2">
+        <div class="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center"><svg class="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-primary">$500K Warranty</span>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2">
+        <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center"><svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-primary">Instant Issuance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SSL -->
+<section class="py-20 bg-surface reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block bg-accent/10 text-accentDark text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Why SSL?</span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary">Your Website Needs HTTPS</h2>
+      <p class="text-gray-600 mt-4 max-w-xl mx-auto">SSL is no longer optional — browsers flag HTTP sites as "Not Secure" and Google ranks HTTPS sites higher.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Encrypt All Data</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">SSL encrypts data between your server and visitors, protecting passwords, credit card info, and personal data from interception.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Boost SEO Rankings</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Google confirmed HTTPS as a ranking signal. Secure your site with SSL and gain a competitive edge in search results.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Build Visitor Trust</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">The padlock icon and green address bar tell visitors your site is verified and safe, increasing conversions and reducing bounce rate.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Enable Online Payments</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">PCI-DSS compliance requires SSL for any website that accepts card payments. No SSL = no payments gateway approval.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Prevent "Not Secure" Warning</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Chrome and Firefox display a red "Not Secure" warning on HTTP sites. An SSL certificate eliminates this and keeps visitors confident.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white border border-transparent hover:border-accent transition-all hover:-translate-y-1">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3 class="font-heading text-xl font-bold text-primary mb-2">Financial Warranty</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Sectigo SSL certificates come with a warranty of up to $500,000 to cover damages in the unlikely event of a mis-issuance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block bg-accent/10 text-accentDark text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">Sectigo SSL Plans</span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary">Choose Your Certificate</h2>
+      <p class="text-gray-600 mt-4 max-w-lg mx-auto">From basic domain validation to full organization and wildcard coverage — find the right SSL for your needs.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- DV SSL -->
+      <div class="plan-card bg-white rounded-3xl p-6 flex flex-col border-2 border-gray-100 reveal">
+        <div class="badge-dv rounded-xl p-3 w-fit mb-4"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-muted uppercase tracking-widest">DV SSL</span>
+        <p class="text-xs text-gray-500 mb-2">Domain Validated</p>
+        <div class="flex items-end gap-1 mt-1 mb-1"><span class="font-heading text-4xl font-bold text-primary">$6.99</span><span class="text-muted text-sm mb-1">/yr</span></div>
+        <p class="text-xs text-accent font-semibold mb-1">per domain</p>
+        <p class="text-gray-600 text-xs mb-5">Blogs, portfolios & small sites.</p>
+        <div class="space-y-2 text-sm flex-1 mb-6">
+          <div class="flex justify-between"><span class="text-gray-600">Validation</span><span class="font-semibold text-primary">Domain Only</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Issuance</span><span class="font-semibold text-primary">Minutes</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Wildcard</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Subdomains</span><span class="font-semibold text-primary">1</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Warranty</span><span class="font-semibold text-primary">$10K</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Green Bar</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Site Seal</span><span class="font-semibold text-primary">Static</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Encryption</span><span class="font-semibold text-primary">256-bit</span></div>
+        </div>
+        <a href="contact.html" class="mt-auto block text-center border-2 border-primary text-primary py-2.5 rounded-xl font-heading font-bold text-sm transition-all hover:bg-primary hover:text-white">Order Now</a>
+      </div>
+
+      <!-- OV SSL (Popular) -->
+      <div class="plan-card popular bg-primary rounded-3xl p-6 relative flex flex-col reveal">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">Most Popular</div>
+        <div class="badge-ov rounded-xl p-3 w-fit mb-4"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+        <span class="font-heading text-sm font-bold text-accentLight uppercase tracking-widest">OV SSL</span>
+        <p class="text-xs text-blue-300 mb-2">Organization Validated</p>
+        <div class="flex items-end gap-1 mt-1 mb-1"><span class="font-heading text-4xl font-bold text-white">$49.99</span><span class="text-blue-300 text-sm mb-1">/yr</span></div>
+        <p class="text-xs text-accent font-semibold mb-1">per domain</p>
+        <p class="text-blue-300 text-xs mb-5">Business websites & portals.</p>
+        <div class="space-y-2 text-sm flex-1 mb-6 text-white">
+          <div class="flex justify-between"><span class="text-blue-300">Validation</span><span class="font-semibold">Organization</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Issuance</span><span class="font-semibold text-accent">1–3 Days</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Wildcard</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Subdomains</span><span class="font-semibold text-accent">1</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Warranty</span><span class="font-semibold text-accent">$250K</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Green Bar</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Site Seal</span><span class="font-semibold text-accent">Dynamic</span></div>
+          <div class="flex justify-between"><span class="text-blue-300">Encryption</span><span class="font-semibold text-accent">256-bit</span></div>
+        </div>
+        <a href="contact.html" class="mt-auto block text-center bg-accent text-primary py-2.5 rounded-xl font-heading font-bold text-sm hover:bg-accentLight transition-all shadow-lg">Order Now</a>
+      </div>
+
+      <!-- EV SSL -->
+      <div class="plan-card bg-white rounded-3xl p-6 flex flex-col border-2 border-gray-100 reveal">
+        <div class="badge-ev rounded-xl p-3 w-fit mb-4"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-muted uppercase tracking-widest">EV SSL</span>
+        <p class="text-xs text-gray-500 mb-2">Extended Validation</p>
+        <div class="flex items-end gap-1 mt-1 mb-1"><span class="font-heading text-4xl font-bold text-primary">$99.99</span><span class="text-muted text-sm mb-1">/yr</span></div>
+        <p class="text-xs text-accent font-semibold mb-1">per domain</p>
+        <p class="text-gray-600 text-xs mb-5">E-commerce, finance & banking.</p>
+        <div class="space-y-2 text-sm flex-1 mb-6">
+          <div class="flex justify-between"><span class="text-gray-600">Validation</span><span class="font-semibold text-primary">Extended</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Issuance</span><span class="font-semibold text-primary">3–5 Days</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Wildcard</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Subdomains</span><span class="font-semibold text-primary">1</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Warranty</span><span class="font-semibold text-primary">$500K</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Green Bar</span><span class="font-semibold text-primary">✓</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Site Seal</span><span class="font-semibold text-primary">Dynamic</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Encryption</span><span class="font-semibold text-primary">256-bit</span></div>
+        </div>
+        <a href="contact.html" class="mt-auto block text-center border-2 border-primary text-primary py-2.5 rounded-xl font-heading font-bold text-sm transition-all hover:bg-primary hover:text-white">Order Now</a>
+      </div>
+
+      <!-- Wildcard SSL -->
+      <div class="plan-card bg-white rounded-3xl p-6 flex flex-col border-2 border-gray-100 reveal">
+        <div class="badge-wc rounded-xl p-3 w-fit mb-4"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></div>
+        <span class="font-heading text-sm font-bold text-muted uppercase tracking-widest">Wildcard SSL</span>
+        <p class="text-xs text-gray-500 mb-2">Unlimited Subdomains</p>
+        <div class="flex items-end gap-1 mt-1 mb-1"><span class="font-heading text-4xl font-bold text-primary">$79.99</span><span class="text-muted text-sm mb-1">/yr</span></div>
+        <p class="text-xs text-accent font-semibold mb-1">per root domain</p>
+        <p class="text-gray-600 text-xs mb-5">Multi-subdomain projects.</p>
+        <div class="space-y-2 text-sm flex-1 mb-6">
+          <div class="flex justify-between"><span class="text-gray-600">Validation</span><span class="font-semibold text-primary">Domain Only</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Issuance</span><span class="font-semibold text-primary">Minutes</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Wildcard</span><span class="font-semibold text-primary">✓</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Subdomains</span><span class="font-semibold text-primary">Unlimited</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Warranty</span><span class="font-semibold text-primary">$10K</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Green Bar</span><span class="text-gray-400">—</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Site Seal</span><span class="font-semibold text-primary">Static</span></div>
+          <div class="flex justify-between"><span class="text-gray-600">Encryption</span><span class="font-semibold text-primary">256-bit</span></div>
+        </div>
+        <a href="contact.html" class="mt-auto block text-center border-2 border-primary text-primary py-2.5 rounded-xl font-heading font-bold text-sm transition-all hover:bg-primary hover:text-white">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-surface reveal">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-heading text-4xl font-bold text-primary">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="faq-item-wrap bg-white border border-gray-200 rounded-2xl overflow-hidden">
+        <button data-action="toggle-faq" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-surface transition-colors">
+          <span class="font-heading text-lg font-semibold text-primary">What's the difference between DV, OV, and EV SSL?</span>
+          <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-body hidden px-6 pb-5 text-gray-600 leading-relaxed">DV (Domain Validation) only verifies you own the domain — issued in minutes. OV (Organization Validation) verifies your business identity — takes 1–3 days. EV (Extended Validation) is the highest level, shows your company name in the browser bar, and takes 3–5 days with thorough vetting. For e-commerce and financial sites, EV is recommended.</div>
+      </div>
+      <div class="faq-item-wrap bg-white border border-gray-200 rounded-2xl overflow-hidden">
+        <button data-action="toggle-faq" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-surface transition-colors">
+          <span class="font-heading text-lg font-semibold text-primary">Do I need a Wildcard SSL for my subdomains?</span>
+          <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-body hidden px-6 pb-5 text-gray-600 leading-relaxed">Yes. If you run subdomains like blog.yourdomain.com, shop.yourdomain.com, or app.yourdomain.com, a Wildcard SSL covers all of them with a single certificate. It's far more cost-effective than purchasing individual certificates for each subdomain.</div>
+      </div>
+      <div class="faq-item-wrap bg-white border border-gray-200 rounded-2xl overflow-hidden">
+        <button data-action="toggle-faq" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-surface transition-colors">
+          <span class="font-heading text-lg font-semibold text-primary">Will Hostika help me install the SSL certificate?</span>
+          <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-body hidden px-6 pb-5 text-gray-600 leading-relaxed">Absolutely. Our technical team will install and configure your SSL certificate at no extra charge. We handle the CSR generation, certificate installation, and HTTPS redirect setup for you.</div>
+      </div>
+      <div class="faq-item-wrap bg-white border border-gray-200 rounded-2xl overflow-hidden">
+        <button data-action="toggle-faq" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-surface transition-colors">
+          <span class="font-heading text-lg font-semibold text-primary">Is there a free SSL option?</span>
+          <svg class="w-5 h-5 text-accent shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-body hidden px-6 pb-5 text-gray-600 leading-relaxed">All Hostika Shared and WordPress hosting plans include a free Let's Encrypt SSL certificate. However, for e-commerce, enterprise, or multi-subdomain use, a paid Sectigo certificate provides higher trust level, warranty coverage, and dedicated support.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="hero-bg py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center text-white">
+    <h2 class="font-heading text-4xl md:text-6xl font-bold mb-6">Secure Your Site <span class="text-accent">Today</span></h2>
+    <p class="text-blue-200 text-lg mb-10 max-w-xl mx-auto">Don't let a "Not Secure" warning cost you customers. Get your SSL certificate in minutes.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#plans" class="bg-accent text-primary font-bold px-10 py-4 rounded-xl hover:bg-accentLight transition-all shadow-xl hover:shadow-accent/40 hover:-translate-y-1 text-lg">Get SSL Now</a>
+      <a href="contact.html" class="glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all text-lg">Talk to an Expert</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ NEWSLETTER CTA ═══════════════════ -->
+<section class="cta-bg py-20 relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <div class="text-white reveal">
+      <div class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm mb-4">📬 Stay Updated</div>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+      <p class="text-blue-200 text-lg mb-8">Get important news, amazing offers & inside scoops delivered to your inbox.</p>
+      <div class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <input type="email" placeholder="Enter your email address..." class="flex-1 px-5 py-4 rounded-xl text-primary outline-none focus:ring-2 focus:ring-accent text-sm" />
+        <button class="bg-accent text-primary font-bold px-8 py-4 rounded-xl hover:bg-accentLight transition-all shadow-lg whitespace-nowrap">Subscribe →</button>
+      </div>
+      <div class="flex justify-center gap-6 mt-10">
+        <a href="#" class="glass text-white px-5 py-3 rounded-xl hover:bg-white/15 transition-all flex items-center gap-2 text-sm font-semibold">
+          👍 Like on Facebook
+        </a>
+        <a href="#" class="glass text-white px-5 py-3 rounded-xl hover:bg-white/15 transition-all flex items-center gap-2 text-sm font-semibold">
+          📡 Subscribe to RSS
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center"><span class="text-primary font-heading font-bold text-xl">H</span></div><span class="font-heading text-2xl font-bold">Hostika</span></div><p class="text-blue-300 text-sm leading-relaxed">Reliable hosting solutions powered by 10Corp infrastructure.</p></div>
+      <div><h4 class="font-heading text-lg font-bold mb-5 text-accent">Quick Links</h4><ul class="space-y-2.5 text-blue-300 text-sm"><li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li><li><a href="about.html" class="hover:text-accent transition-colors">About</a></li><li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li></ul></div>
+      <div><h4 class="font-heading text-lg font-bold mb-5 text-accent">Hosting Plans</h4><ul class="space-y-2.5 text-blue-300 text-sm"><li><a href="shared-hosting.html" class="hover:text-accent transition-colors">Shared Hosting</a></li><li><a href="wordpress-hosting.html" class="hover:text-accent transition-colors">WordPress Hosting</a></li><li><a href="email-hosting.html" class="hover:text-accent transition-colors">Email Hosting</a></li><li><a href="dedicated-server.html" class="hover:text-accent transition-colors">Dedicated Server</a></li></ul></div>
+      <div><h4 class="font-heading text-lg font-bold mb-5 text-accent">Security</h4><ul class="space-y-2.5 text-blue-300 text-sm"><li><a href="ssl-certificates.html" class="text-accent">SSL Certificates</a></li><li><a href="website-backup.html" class="hover:text-accent transition-colors">Website Backup</a></li><li><a href="website-security.html" class="hover:text-accent transition-colors">Website Security</a></li></ul></div>
+    </div>
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-blue-400 text-sm">
+      <p>Copyrights © 2026 All Rights Reserved by <span class="text-accent font-semibold">10Corp.</span><br><span class="text-xs">10Corp is part of Web Services LLC.</span></p>
+      <nav class="flex gap-6"><a href="index.html" class="hover:text-accent">Home</a><a href="about.html" class="hover:text-accent">About</a><a href="contact.html" class="hover:text-accent">Contact</a></nav>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+<script src="js/ssl-certificates.js" defer></script>
+
+<!-- Scroll to Top -->
+<button id="scroll-top"
+  class="fixed bottom-8 right-8 w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center shadow-xl hover:bg-accentLight transition-all z-50 font-bold text-lg"
+  aria-label="Scroll to top">
+  ↑
+</button>
+
+</body>
+</html>

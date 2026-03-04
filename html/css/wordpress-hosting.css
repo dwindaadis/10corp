@@ -1,0 +1,18 @@
+/* WordPress Hosting — Page Styles (uses standard Hostika design system) */
+/* All core styles come from main.css — only page-specific overrides here */
+
+/* WP logo icon in hero */
+.hero-bg .wp-logo {
+  color: white;
+}
+
+/* Comparison table specific */
+.feature-row {
+  border-bottom: 1px solid #f1f5f9;
+}
+.feature-row:last-child {
+  border-bottom: none;
+}
+.feature-row td {
+  padding: 0.75rem 0;
+}
